@@ -1,0 +1,9 @@
+.navbar {
+  &-list {
+    display: flex;
+    &__item {
+      margin-right: 20px;
+      list-style: none;
+    }
+  }
+}
