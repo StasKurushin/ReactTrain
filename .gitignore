@@ -61,4 +61,4 @@ typings/
 .next
 
 #IDE files
-.idea
+.idea/
