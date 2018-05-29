@@ -1,0 +1,15 @@
+@import '../../mixin.scss';
+.content {
+  display: flex;
+  justify-content: center;
+  &-container {
+    @include container()
+
+  }
+}
+.jumbotron {
+  background-color: #ffffff;
+  width: 800px;
+  margin-bottom: 0;
+  padding: 50px 0;
+}
