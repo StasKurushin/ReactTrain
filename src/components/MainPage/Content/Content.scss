@@ -1,10 +1,9 @@
-@import "../../mixin.scss";
+@import '../../../assets/mixin';
 .content {
   display: flex;
   justify-content: center;
   &-container {
     @include container()
-
   }
 }
 .jumbotron {

@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import { Jumbotron } from "reactstrap";
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { Jumbotron } from 'reactstrap';
 
 export default class BlogItem extends PureComponent {
     static propTypes = {

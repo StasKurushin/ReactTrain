@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
-import "./Content.scss";
-import { Jumbotron } from "reactstrap";
+import React, { PureComponent } from 'react';
+import './Content.scss';
+import { Jumbotron } from 'reactstrap';
 
 export default class Content extends PureComponent {
 

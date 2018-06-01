@@ -1,13 +1,14 @@
-import React, { PureComponent } from "react";
-import BlogItemList from "../components/Users/BlogItemList";
-import Loading from "../components/Loading"
+import React, { PureComponent } from 'react';
+import BlogItemList from 'components/Users/BlogItemList';
+import Loading from 'components/Loading'
 
 export default class BlogListContainer extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             blogItems: [],
-            loading: false
+            loading: false,
+
         }
     }
 
@@ -18,13 +19,15 @@ export default class BlogListContainer extends PureComponent {
             .then((blogItems) => {
                 this.setState({
                     blogItems,
-                    loading: false
+                    loading: false,
+
                 })
             })
             .catch(() => {
                 this.setState({
                     blogItems: [],
-                    loading: false
+                    loading: false,
+
                 })
             })
     }

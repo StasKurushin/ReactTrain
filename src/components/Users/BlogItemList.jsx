@@ -1,14 +1,15 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import BlogItem from "./BlogItem";
-import "../../components/MainPage/Content/Content.scss"
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import BlogItem from './BlogItem';
+import 'components/MainPage/Content/Content.scss'
 
 export default class BlogItemList extends PureComponent {
     static propTypes = {
         blogItems: PropTypes.arrayOf(
             PropTypes.shape({
                 title: PropTypes.string,
-                body: PropTypes.string
+                body: PropTypes.string,
+
             })
         )
     };

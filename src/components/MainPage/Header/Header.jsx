@@ -1,6 +1,6 @@
-import "./Header.scss";
-import React, { PureComponent } from "react";
-import Navbar from "../../Navbar";
+import './Header.scss';
+import React, { PureComponent } from 'react';
+import Navbar from '../../Navbar';
 
 export default class Header extends PureComponent {
     render() {

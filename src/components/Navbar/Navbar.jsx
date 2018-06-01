@@ -1,5 +1,5 @@
-import "./Navbar.scss";
-import React, { PureComponent } from "react";
+import './Navbar.scss';
+import React, { PureComponent } from 'react';
 
 export default class Navbar extends PureComponent {
     render() {
