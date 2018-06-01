@@ -1,26 +1,12 @@
-import React, { PureComponent } from 'react';
-import './Content.scss';
-import { Jumbotron, Button } from 'reactstrap';
-import PropTypes from 'prop-types';
+import React, { PureComponent } from "react";
+import "./Content.scss";
+import { Jumbotron } from "reactstrap";
 
 export default class Content extends PureComponent {
-    /*static propTypes = {
-        items: PropTypes.arrayOf(
-            PropTypes.shape({
-                name: PropTypes.string.isRequired,
-                text: PropTypes.string.isRequired
-            })
-        )
-    };*/
-    /*componentWillReceiveProps() {
 
-    }*/
-    /*shouldComponentUpdate() {
-
-    }*/
     render() {
         return (
-            <div className='content'>
+            <div className="content">
                 <div className="content-container">
                     <Jumbotron>
                         <h1 className="display-5">Hello, world</h1>

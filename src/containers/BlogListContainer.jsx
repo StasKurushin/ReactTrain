@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import BlogItemList from '../components/Users/BlogItemList';
-import Loading from '../components/Loading'
+import React, { PureComponent } from "react";
+import BlogItemList from "../components/Users/BlogItemList";
+import Loading from "../components/Loading"
 
 export default class BlogListContainer extends PureComponent {
     constructor(props) {
@@ -13,7 +13,7 @@ export default class BlogListContainer extends PureComponent {
 
     componentDidMount() {
         this.setState( { loading: true });
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch("https://jsonplaceholder.typicode.com/posts")
             .then((response) => response.json())
             .then((blogItems) => {
                 this.setState({
