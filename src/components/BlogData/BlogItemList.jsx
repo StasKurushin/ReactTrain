@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import BlogItem from './BlogItem';
-import 'components/MainPage/Content/Content.scss'
+import 'components/BlogData/BlogItemList.scss'
 
 export default class BlogItemList extends PureComponent {
     static propTypes = {
