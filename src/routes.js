@@ -1,6 +1,6 @@
-import BlogPage from './components/BlogPage'
 import MainPage from 'components/MainPage/MainPage';
 import BlogItem from 'components/BlogData/BlogItem';
+import BlogItemList from "components/BlogData/BlogItemList";
 
 export default [
     {
@@ -10,11 +10,11 @@ export default [
     },
     {
         path: '/blog-page',
-        component: BlogPage,
+        component: BlogItemList,
         exact: true
     },
     {
-        path: '/blog-page/:blogId',
+        path: '/blog-page/:userId',
         component: BlogItem,
         exact: true
     }

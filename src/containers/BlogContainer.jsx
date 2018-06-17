@@ -17,7 +17,7 @@ export default class BlogContainer extends PureComponent {
         const { match } = this.props;
 
         this.setState({ loading: true });
-        fetch(`https://jsonplaceholder.typicode.com/posts${match.params.blogId}`)
+        fetch(`https://jsonplaceholder.typicode.com/posts/${match.params.userId}`)
             .then((response) => response.json())
             .then((blogItem) => {
                 this.setState({
