@@ -7,15 +7,17 @@
     "clear": "rimraf ./dist",
     "dev": "webpack-dev-server --mode development",
     "build": "npm run clear && webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createComponent": "node tools/component.js --className"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.2.5",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "classnames": "^2.2.5"
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.1",

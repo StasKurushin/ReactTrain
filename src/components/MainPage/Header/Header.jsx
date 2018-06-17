@@ -13,7 +13,7 @@ export default class Header extends PureComponent {
                             StasKu Blog
                         </h1>
                         <p className="header__intro">
-                            A Blog About Subjective Thoughts
+                            Subjective Thoughts
                         </p>
                     </div>
                 </div>

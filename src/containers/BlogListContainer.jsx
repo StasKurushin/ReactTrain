@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import BlogItemList from 'components/Users/BlogItemList';
+import React, { PureComponent, Fragment } from 'react';
+import BlogItemList from 'components/BlogData/BlogItemList';
 import Loading from 'components/Loading'
 
 export default class BlogListContainer extends PureComponent {
@@ -11,7 +11,6 @@ export default class BlogListContainer extends PureComponent {
 
         }
     }
-
     componentDidMount() {
         this.setState( { loading: true });
         fetch("https://jsonplaceholder.typicode.com/posts")
@@ -31,13 +30,12 @@ export default class BlogListContainer extends PureComponent {
                 })
             })
     }
-
     render() {
         const { blogItems, loading } = this.state;
         return (
-            <div>
+            <Fragment>
                 { loading ? <Loading /> : <BlogItemList blogItems={blogItems}/> }
-            </div>
+            </Fragment>
         )
     };
 }
