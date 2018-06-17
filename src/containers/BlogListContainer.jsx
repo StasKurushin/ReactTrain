@@ -1,35 +1,16 @@
 import React, { PureComponent, Fragment } from 'react';
 import BlogItemList from 'components/BlogData/BlogItemList';
 import Loading from 'components/Loading'
+import {connect} from "react-redux";
+import {loadBlogItems} from 'actions/blogItems';
+import BlogContainer from "containers/BlogContainer";
 
-export default class BlogListContainer extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            blogItems: [],
-            loading: false,
-
-        }
-    }
+class BlogListContainer extends PureComponent {
     componentDidMount() {
-        this.setState( { loading: true });
-        fetch("https://jsonplaceholder.typicode.com/posts")
-            .then((response) => response.json())
-            .then((blogItems) => {
-                this.setState({
-                    blogItems,
-                    loading: false,
-
-                })
-            })
-            .catch(() => {
-                this.setState({
-                    blogItems: [],
-                    loading: false,
-
-                })
-            })
+        const { load } = this.props;
+        load();
     }
+
     render() {
         const { blogItems, loading } = this.state;
         return (
@@ -39,3 +20,20 @@ export default class BlogListContainer extends PureComponent {
         )
     };
 }
+
+function mapStateToProps(state, ownProps) {
+    return {
+        ...ownProps,
+        blogItems: state.blogItems.blogItems,
+        loading: state.blogItems.loading
+    }
+}
+
+function mapDispatchToProps(dispatch, props) {
+    return {
+        ...props,
+        load: () => loadBlogItems(dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlogListContainer)

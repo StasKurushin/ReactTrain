@@ -1,7 +1,8 @@
-import React, { PureComponent } from 'react';
+import React, {Fragment, PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import BlogItem from './BlogItem';
 import 'components/BlogData/BlogItemList.scss'
+import Header from "components/BlogPage/Header/Header";
 
 export default class BlogItemList extends PureComponent {
     static propTypes = {
@@ -20,13 +21,16 @@ export default class BlogItemList extends PureComponent {
     render() {
         const { blogItems } =  this.props;
         return (
-            <div className="content">
-                <div className="content-container">
-                    {blogItems.map((blogItem, idx) =>
-                        <BlogItem key={idx} blogItem={blogItem} />
-                    )}
+            <Fragment>
+                <Header/>
+                <div className="content">
+                    <div className="content-container">
+                        {blogItems.map((blogItem, idx) =>
+                            <BlogItem key={idx} blogItem={blogItem} />
+                        )}
+                    </div>
                 </div>
-            </div>
+            </Fragment>
         )
     }
 }

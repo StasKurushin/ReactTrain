@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Jumbotron } from 'reactstrap';
+
 import { Link } from 'react-router-dom'
 
 export default class BlogItem extends PureComponent {
@@ -17,7 +18,7 @@ export default class BlogItem extends PureComponent {
         return (
             <Jumbotron>
                 <Link to={`/blog-page/${blogItem.id}`}>
-                    <h1 className="display-5">{blogItem.title}</h1>
+                    {blogItem.title}
                 </Link>
                 <p className="lead">
                     {blogItem.body}
